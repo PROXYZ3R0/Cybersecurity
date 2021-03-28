@@ -132,3 +132,4 @@ SSH into the control node and follow the steps below:
 
 ## If you are successful you should see the following
 
+![NetworkDiagram](https://github.com/PROXYZ3R0/Cybersecurity/blob/master/ELK_Stack/Images/Kibana.JPG)
