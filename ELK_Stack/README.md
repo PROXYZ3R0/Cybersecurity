@@ -47,13 +47,14 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 It periodically collects metrics from the services currently running on the server and the operating system.
 The configuration details of each machine may be found below.
 
-| Name     | Function      | IP Address          | Operating System |
-|----------|----------     |------------         |------------------|
-| Jump Box |Gateway        |10.0.0.10            | Linux            |
-| VM-1     |Virtual Machine|10.0.0.11            | Linux            |
-| VM-2     |Virtual Machine|10.0.0.12            | Linux            |
-| VM-3     |Virtual Machine|10.0.0.13            | Linux            |
-| ELK-VM1  |Elk Stack      |10.1.0.4             | Linux            |
+| Name        | Function      | IP Address          | Operating System |
+|----------   |----------     |------------         |------------------|
+| Jump Box    |Gateway        |10.0.0.10            | Linux            |
+| VM-1        |Virtual Machine|10.0.0.11            | Linux            |
+| VM-2        |Virtual Machine|10.0.0.12            | Linux            |
+| VM-3        |Virtual Machine|10.0.0.13            | Linux            |
+| ELK-VM1     |Traffic Moniter|10.1.0.4             | Linux            |
+|Load Balancer|Traffic Manager|52.156.114.227       | n/a              | 
 
 
 ### Access Policies
@@ -73,14 +74,14 @@ Machines within the network can only be accessed by the Jump Box.
 
 A summary of the access policies in place can be found in the table below.
 
-| Name      | Publicly Accessible | Allowed IP Addresses |
-|---------- |---------------------|----------------------|
-| Jump Box  |   Yes               |Local Machine         |
-| Elk       |   Yes               |10.0.0.0/16           |
-| Elk       |   Yes-Kibana:5601   |52.156.114.227        |
-|Red-Team-LB|	HTTP-80-yes       |52.156.114.227        |
-|Web-2	    |	No		  |52.156.114.227 	 |
-|Web-3	    |	No		  |52.156.114.227        |
+| Name      | Publicly Accessible | Allowed IP Addresses  |
+|---------- |---------------------|---------------------- |
+|Jump Box   |   No                |Local Machine          |
+|Elk        |   No                |10.0.0.10/Local Machine|
+|VM-1       |   No                |10.0.0.10              |
+|Red-Team-LB|	No                |Local Machine          |
+|Web-2	    |	No		  |10.0.0.10 	          |
+|Web-3	    |	No		  |10.0.0.10              |
 
 
 ### Elk Configuration
@@ -113,7 +114,7 @@ This ELK server is configured to monitor the following machines:
  - | Web-3 | Web Server | 10.0.0.13 | Linux |
 
 We have installed the following Beats on these machines:
-- Successfully installed and ran filebeats, and metricbeats on all 3 Virtual Machines.
+- Successfully installed and ran filebeats,and metricbeats on all 3 Virtual Machines.
 
 These Beats allow us to collect the following information from each machine:
 - Filebeat collects and moniters all log Files.
