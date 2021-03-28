@@ -38,7 +38,8 @@ Load balancing ensures that the application will be highly accessible, in additi
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the Jump Box and system network.
 
-- _TODO: What does Filebeat watch for?_
+- What does Filebeat watch for?
+ - Filebeat moniters log files and locations you specify, it also collects log events, and will forward the data to either Logstash or Elasticsearch.
 
 
 - What does Metricbeat record? 
@@ -85,12 +86,17 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+
+-What is the main advantage of automating configuration with Ansible?
+
+ - Allows to make changes across multiple machines at once.
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+ - Installed docker.io to house the container. 
+ - Installed python3-pip which is a package management system to manage software packages.
+ - Increased Virtual memory to alllow system to carry out multiple processes at once. 
+ - Download and launch the Elk Container 
+ - Enable service docker on boot 
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
