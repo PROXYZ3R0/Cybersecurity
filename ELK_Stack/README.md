@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![TODO: Update the path with the name of your diagram](Images/diagram_filename.png)
+![NetworkDiagram](https://github.com/PROXYZ3R0/Cybersecurity/blob/master/ELK_Stack/Images/Untitled%20Diagram.jpg)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. 
 Alternatively, select portions of the ansible file may be used to install only certain pieces of it, such as Filebeat.
@@ -100,7 +100,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+![ELK-Container-SC](https://github.com/PROXYZ3R0/Cybersecurity/blob/master/ELK_Stack/Images/ElkVM1-Container-SC.JPG)
 
 
 
